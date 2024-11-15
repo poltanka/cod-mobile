@@ -25,13 +25,15 @@
     "preview": "vite preview --open",
     "lint": "eslint --ext .js ./",
     "lint:fix": "eslint --fix --ext .js ./",
+    "lint:css": "stylelint \"./**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint --fix \"./**/*.{css,scss}\"",
     "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
     "buildpreview": "vite build && vite preview --open"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "eslint": "^9.14.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
