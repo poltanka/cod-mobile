@@ -9,6 +9,7 @@ export default defineConfig({
   },
   plugins: [
     eslint({
+      exclude: ['/virtual:/**', 'node_modules/**'],
       cache: false,
       fix: true,
     }),
