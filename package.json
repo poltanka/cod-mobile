@@ -1,7 +1,7 @@
 {
-  "name": "vite-vanilla-js-template",
-  "description": "ViteJS starter template for vanilla JavaScript with some basic dependencies.",
-  "version": "2.0.0",
+  "name": "cod-mobile-site",
+  "description": "COD mobile project",
+  "version": "0.0.1",
   "type": "module",
   "keywords": [
     "vanilla",
@@ -20,18 +20,20 @@
     "vitejs-template"
   ],
   "scripts": {
-    "dev": "vite --host --open",
-    "lint": "eslint --ext .js ./",
-    "lint:fix": "eslint --fix --ext .js ./",
-    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
+    "start": "vite --host --open",
     "build": "vite build",
     "preview": "vite preview --open",
+    "lint": "eslint --ext .js ./",
+    "lint:fix": "eslint --fix --ext .js ./",
+    "lint:css": "stylelint \"./**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint --fix \"./**/*.{css,scss}\"",
+    "format": "prettier --write \"./**/*.{js,jsx,json,css}\"",
     "buildpreview": "vite build && vite preview --open"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "cssnano": "^7.0.6",
-    "eslint": "^9.14.0",
+    "eslint": "^8.57.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.31.0",
@@ -39,10 +41,19 @@
     "postcss": "^8.4.49",
     "postcss-nesting": "^13.0.1",
     "prettier": "^3.3.3",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.0.0",
     "vite": "5.4.11",
     "vite-plugin-eslint": "^1.8.1"
   },
   "dependencies": {
+    "sass": "^1.59.3",
+    "stylelint": "^14.5.3",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^23.0.0",
+    "stylelint-config-standard-scss": "^2.0.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
+    "stylelint-selector-bem-pattern": "^2.1.1",
     "the-new-css-reset": "^1.11.3"
   }
 }
