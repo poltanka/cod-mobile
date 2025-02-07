@@ -1,15 +1,17 @@
+@use "../helpers" as *;
+
 #footer {
   color: var(--color-black);
   background: var(--color-white);
 
   .logo {
-    font-size: calc(var(--heading-font-size) - 12px);
+    font-size: rem(24);
   }
 }
 
 .footer__holder {
   padding: 40px 0;
-  @media screen and (min-width: 1024px) {
+  @include desktop {
     padding: 65px 0;
   }
 

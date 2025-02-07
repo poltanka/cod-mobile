@@ -1,0 +1,197 @@
+@use '../helpers' as *;
+
+#header {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-dark);
+  animation-name: scrolling-header;
+  animation-fill-mode: both;
+  animation-range: rem(50) rem(150);
+  animation-timeline: scroll();
+
+  .container {
+    @include desktop {
+      padding-inline: calc(var(--container-padding-x) * 2);
+    }
+  }
+}
+
+@keyframes scrolling-header {
+  to {
+    box-shadow: 0 0 1rem 0 var(--color-black);
+  }
+}
+
+.header__holder {
+  position: relative;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: rem(20);
+  @include laptop {
+    padding-block: rem(40);
+  }
+}
+
+.header__frame {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: rem(40);
+  align-items: center;
+  padding: rem(40) var(--container-padding-x);
+  text-align: center;
+  background: var(--color-black);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-100%);
+  @include tablet {
+    &.active {
+      transform: translateX(0);
+    }
+  }
+  @include desktop {
+    padding: rem(64) calc(var(--container-padding-x) * 2);
+  }
+  @include widescreen {
+    position: static;
+    flex-direction: row;
+    gap: rem(36);
+    justify-content: space-between;
+    padding: 0;
+    background: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 300px;
+    @include widescreen {
+      flex-shrink: 0;
+      width: auto;
+      max-width: none;
+    }
+  }
+}
+
+.header__burger-button {
+  position: absolute;
+  right: var(--container-padding-x);
+  z-index: 3;
+  display: block;
+  width: rem(44);
+  height: rem(44);
+  font-size: 0;
+  line-height: 0;
+  background: transparent;
+  cursor: pointer;
+  @include widescreen {
+    display: none;
+  }
+  &:hover {
+    span,
+    &::before,
+    &::after {
+      background: var(--color-primary);
+    }
+  }
+
+  span,
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    left: 15%;
+    height: rem(2);
+    background: var(--color-white);
+    border-radius: rem(8);
+    transition: all 0.3s ease-in-out;
+  }
+  &::after {
+    top: 70%;
+    left: 35%;
+  }
+
+  &.active {
+    &::before,
+    &::after {
+      top: 50%;
+      left: 15%;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    span {
+      opacity: 0;
+    }
+  }
+
+  span {
+    top: 50%;
+  }
+}
+
+.header__menu {
+  width: 100%;
+  overflow-y: auto;
+  @include widescreen {
+    overflow: visible;
+  }
+
+  .header__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: rem(10);
+    @include tablet {
+      gap: rem(16);
+    }
+    @include widescreen {
+      flex-flow: row wrap;
+      gap: rem(80);
+      align-items: center;
+      justify-content: center;
+    }
+
+    a {
+      position: relative;
+      display: inline-flex;
+      padding: rem(8) 0;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+      @include laptop {
+        display: inline-block;
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        height: 4px;
+        background: var(--color-primary);
+        border-radius: rem(20);
+        opacity: 0;
+      }
+      &::after {
+        left: calc(50% + rem(3));
+        width: 5px;
+      }
+      &:hover,
+      &.active {
+        &::before,
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

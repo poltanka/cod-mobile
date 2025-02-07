@@ -1,57 +1,43 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      rel="icon"
-      type="image/svg+xml"
-      href="/vite.svg"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.googleapis.com"
-    />
-    <link
-      rel="preconnect"
-      href="https://fonts.gstatic.com"
-      crossorigin
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <div id="wrapper">
-      <header id="header">
-        <div class="container">
-          <div class="header__holder">
-            <div class="logo">
-              <a href="#">LOGO</a>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <link
+    rel="icon"
+    type="image/svg+xml"
+    href="/vite.svg"
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;1,100;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <title>Document</title>
+</head>
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <div class="container">
+        <div class="header__holder">
+          <a class="header__logo logo" href="/" aria-label="Home">LOGO</a>
 
-            <input
-              class="menu__btn"
-              type="checkbox"
-              id="menu-btn"
-              aria-label="Toggle Navigaton Menu"
-            />
-            <label
-              class="menu__icon"
-              for="menu-btn"
-            >
-              <span>Menu</span>
-            </label>
-
-            <nav class="menu">
-              <ul class="menu__list">
+          <div class="header__frame">
+            <nav class="header__menu">
+              <ul class="header__menu-list">
                 <li>
-                  <a href="#">Home</a>
+                  <a href="#" class="active">Home</a>
                 </li>
                 <li>
                   <a href="#">About us</a>
@@ -63,264 +49,420 @@
                   <a href="#">News</a>
                 </li>
               </ul>
-
-              <div>
-                <a
-                  href="#"
-                  class="btn"
-                >
-                  Contact us
-                </a>
-              </div>
             </nav>
+
+            <a href="#" class="button button--small">
+              Contact us
+            </a>
           </div>
-        </div>
-      </header>
-      <main>
-        <section class="hero section-padding">
-          <div class="container relative">
-            <div class="hero__holder">
-              <div class="hero__image">
-                <picture>
-                  <source
-                    srcset="/src/hero.png"
-                    media="(min-width: 768px)"
-                  />
-                  <img
-                    src="/src/hero.png"
-                    alt="Hero Image"
-                  />
-                </picture>
-              </div>
-              <div class="hero__content">
-                <div class="hero__text">
-                  <div class="subtitle h6">Proved By prodesigner</div>
-                  <h1>Work that we produce for our clients</h1>
+
+          <button type="button" class="header__burger-button">
+            <span>Menu</span>
+          </button>
+        </div> 
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-padding">
+        <div class="container relative">
+          <div class="hero__holder">
+            <div class="hero__image">
+              <picture>
+                <source
+                  srcset="/src/hero.png"
+                  media="(min-width: 768px)"
+                />
+                <img
+                  src="/src/hero.png"
+                  alt="Hero Image"
+                />
+              </picture>
+            </div>
+            <div class="hero__content">
+              <div class="hero__text">
+                <div class="subtitle h6">Proved By prodesigner</div>
+                <h1 class="hero__title">Work that we produce for our clients</h1>
+                <div class="hero__description">
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
                     industry's standard.
                   </p>
                 </div>
-                <a
-                  href="#"
-                  class="btn btn--primary rounded"
-                >
-                  Get more details
+              </div>
+              <a
+                href="#"
+                class="button button--primary rounded"
+              >
+                Get more details
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-title">
+            <h2>Currently Trending Games</h2>
+            <div>
+              <a href="#" class="button button--secondary">View all</a>
+            </div>
+          </div>
+          <div class="grid-container">
+            <div class="grid-item text-center">
+              <div class="grid-item__media">
+                <a href="#">
+                  <picture>
+                    <source srcset="src/assets/images/game-01.jpg" media="(min-width: 768px)"/>
+                    <img src="src/assets/images/game-01.jpg" alt="Game name" height="277" width="251"/>
+                  </picture>
                 </a>
               </div>
+              <div>
+                40 Followers
+              </div>
+            </div>
+            <div class="grid-item text-center">
+              <div class="grid-item__media">
+                <a href="#">
+                  <picture>
+                    <source srcset="src/assets/images/game-02.jpg" media="(min-width: 768px)"/>
+                    <img src="src/assets/images/game-02.jpg" alt="Game name" height="277" width="251"/>
+                  </picture>
+                </a>
+              </div>
+              <div>
+                40 Followers
+              </div>
+            </div>
+            <div class="grid-item text-center">
+              <div class="grid-item__media">
+                <a href="#">
+                  <picture>
+                    <source srcset="src/assets/images/game-03.jpg" media="(min-width: 768px)"/>
+                    <img src="src/assets/images/game-03.jpg" alt="Game name" height="277" width="251"/>
+                  </picture>
+                </a>
+              </div>
+              <div>
+                40 Followers
+              </div>
+            </div>
+            <div class="grid-item text-center">
+              <div class="grid-item__media">
+                <a href="#">
+                  <picture>
+                    <source srcset="src/assets/images/game-04.jpg" media="(min-width: 768px)"/>
+                    <img src="src/assets/images/game-04.jpg" alt="Game name" height="277" width="251"/>
+                  </picture>
+                </a>
+              </div>
+              <div>
+                40 Followers
+              </div>
             </div>
           </div>
-        </section>
-      </main>
-      <footer id="footer">
-        <div class="footer__holder">
-          <div class="container">
-            <div class="footer__columns">
-              <div class="footer__text">
-                <div>
-                  <a
-                    href="#"
-                    class="logo"
-                  >
-                    LOGO
-                  </a>
-                </div>
-                <div>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                </div>
-                <div>
-                  <a href="#">@Lorem</a>
-                </div>
-              </div>
+        </div>
+      </section>
 
-              <div>
-                <nav>
-                  <h3 class="footer__title">About us</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Zeux</a>
-                    </li>
-                    <li>
-                      <a href="#">Portfolio</a>
-                    </li>
-                    <li>
-                      <a href="#">Careers</a>
-                    </li>
-                    <li>
-                      <a href="#">Contact us</a>
-                    </li>
-                  </ul>
-                </nav>
+      <section class="benefits section-padding">
+        <div class="container">
+          <div class="section-title">
+            <h2>Why work with us</h2>
+          </div>
+          <div class="grid-container">
+            <div class="grid-content">
+              <div class="tag">
+                <div class="tag__label tag__label--pink">Lorem ipsum</div>
               </div>
-
+              <h3 class="columns__content-title">Lorem Ipsum</h3>
               <div>
-                <h3 class="footer__title">Contact us</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </div>
+            <div class="grid-content">
+              <div class="tag">
+                <div class="tag__label tag__label--light-brown">Lorem ipsum</div>
+              </div>
+              <h3 class="columns__content-title">Lorem Ipsum</h3>
+              <div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </div>
+            <div class="grid-content">
+              <div class="tag">
+                <div class="tag__label tag__label--mint">Lorem ipsum</div>
+              </div>
+              <h3 class="columns__content-title">Lorem Ipsum</h3>
+              <div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</p>
+              </div>
+            </div>
+          </div>
+            
+        </div>
+      </section>
+
+      <section class="team section-padding">
+        <div class="container">
+          <h2 class="section-title">Our Team</h2>
+          <div class="grid-container grid-container--dark text-center">
+            <div class="grid-content">
+              <div class="team__avatar">
+                <picture>
+                  <source srcset="src/assets/images/avatar-01.png" media="(min-width: 768px)"/>
+                  <img src="src/assets/images/avatar-01.png" alt="John Peter" height="123" width="123"/>
+                </picture>
+              </div>
+                <h3 class="h6">John Peter</h3>
+                <div>COO</div>
+            </div>
+            <div class="grid-content">
+              <div class="team__avatar">
+                <picture>
+                  <source srcset="src/assets/images/avatar-01.png" media="(min-width: 768px)"/>
+                  <img src="src/assets/images/avatar-01.png" alt="John Peter" height="123" width="123"/>
+                </picture>
+              </div>
+                <h3 class="h6">John Peter</h3>
+                <div>COO</div>
+            </div>
+            <div class="grid-content">
+              <div class="team__avatar">
+                <picture>
+                  <source srcset="src/assets/images/avatar-01.png" media="(min-width: 768px)"/>
+                  <img src="src/assets/images/avatar-01.png" alt="John Peter" height="123" width="123"/>
+                </picture>
+              </div>
+                <h3 class="h6">John Peter</h3>
+                <div>COO</div>
+            </div>
+            <div class="grid-content">
+              <div class="team__avatar">
+                <picture>
+                  <source srcset="src/assets/images/avatar-01.png" media="(min-width: 768px)"/>
+                  <img src="src/assets/images/avatar-01.png" alt="John Peter" height="123" width="123"/>
+                </picture>
+              </div>
+                <h3 class="h6">John Peter</h3>
+                <div>COO</div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </main>
+    <footer id="footer">
+      <div class="footer__holder">
+        <div class="container">
+          <div class="footer__columns">
+            <div class="footer__text">
+              <div>
+                <a
+                  href="/"
+                  class="logo"
+                  aria-label="Home"
+                >
+                  LOGO
+                </a>
+              </div>
+              <div>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              </div>
+              <div>
+                <a href="#">@Lorem</a>
+              </div>
+            </div>
+
+            <div>
+              <nav>
+                <h3 class="footer__title">About us</h3>
                 <ul>
                   <li>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    <a href="#">Zeux</a>
                   </li>
                   <li>
-                    <a href="tel:+908 89097 890">+908 89097 890</a>
+                    <a href="#">Portfolio</a>
+                  </li>
+                  <li>
+                    <a href="#">Careers</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact us</a>
                   </li>
                 </ul>
-              </div>
+              </nav>
+            </div>
 
-              <div class="footer__item">
-                <ul class="social-networks">
-                  <li>
-                    <a
-                      href="#"
-                      class="social-networks__icon"
-                      target="_blank"
+            <div>
+              <h3 class="footer__title">Contact us</h3>
+              <ul>
+                <li>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </li>
+                <li>
+                  <a href="tel:+908 89097 890">+908 89097 890</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer__item">
+              <ul class="social-networks">
+                <li>
+                  <a
+                    href="#"
+                    class="social-networks__icon"
+                    target="_blank"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 12 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 12 12"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clip-path="url(#clip0_1_1279)">
-                          <path
-                            d="M7.99924 1.9925H9.09474V0.0845C8.90574 0.0585 8.25574 0 7.49874 0C5.91924 0 4.83724 0.9935 4.83724 2.8195V4.5H3.09424V6.633H4.83724V12H6.97424V6.6335H8.64674L8.91224 4.5005H6.97374V3.031C6.97424 2.4145 7.14024 1.9925 7.99924 1.9925Z"
-                            fill="currentColor"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1_1279">
-                            <rect
-                              width="12"
-                              height="12"
-                              fill="currentColor"
-                              transform="translate(0.000732422)"
-                            />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="social-networks__icon"
-                      target="_blank"
-                    >
-                      <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 13 13"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clip-path="url(#clip0_1_1284)">
-                          <path
-                            d="M9.48173 0H3.51971C1.57931 0 0.000732422 1.57858 0.000732422 3.51898V9.4811C0.000732422 11.4214 1.57931 13 3.51971 13H9.48183C11.4221 13 13.0007 11.4214 13.0007 9.4811V3.51898C13.0007 1.57858 11.4221 0 9.48173 0V0ZM12.2386 9.4811C12.2386 11.0012 11.0019 12.2379 9.48173 12.2379H3.51971C1.99955 12.2379 0.762847 11.0012 0.762847 9.4811V3.51898C0.762847 1.99881 1.99955 0.762114 3.51971 0.762114H9.48183C11.0019 0.762114 12.2386 1.99881 12.2386 3.51898V9.4811Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M6.50075 2.94531C4.54071 2.94531 2.94617 4.53986 2.94617 6.49989C2.94617 8.45993 4.54071 10.0545 6.50075 10.0545C8.46078 10.0545 10.0553 8.45993 10.0553 6.49989C10.0553 4.53986 8.46078 2.94531 6.50075 2.94531ZM6.50075 9.29236C4.96105 9.29236 3.70828 8.03969 3.70828 6.49989C3.70828 4.96019 4.96105 3.70743 6.50075 3.70743C8.04055 3.70743 9.29322 4.96019 9.29322 6.49989C9.29322 8.03969 8.04055 9.29236 6.50075 9.29236Z"
-                            fill="currentColor"
-                          />
-                          <path
-                            d="M10.1403 1.68311C9.56108 1.68311 9.08997 2.15432 9.08997 2.73344C9.08997 3.31266 9.56108 3.78388 10.1403 3.78388C10.7195 3.78388 11.1907 3.31266 11.1907 2.73344C11.1907 2.15422 10.7195 1.68311 10.1403 1.68311ZM10.1403 3.02166C9.98141 3.02166 9.85208 2.89233 9.85208 2.73344C9.85208 2.57445 9.98141 2.44522 10.1403 2.44522C10.2993 2.44522 10.4286 2.57445 10.4286 2.73344C10.4286 2.89233 10.2993 3.02166 10.1403 3.02166Z"
-                            fill="currentColor"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1_1284">
-                            <rect
-                              width="13"
-                              height="13"
-                              fill="currentColor"
-                              transform="translate(0.000732422)"
-                            />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="social-networks__icon"
-                      target="_blank"
-                    >
-                      <svg
-                        width="13"
-                        height="11"
-                        viewBox="0 0 13 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
+                      <g clip-path="url(#clip0_1_1279)">
                         <path
-                          d="M13.0007 1.46919C12.5173 1.68125 12.0022 1.82181 11.4651 1.89006C12.0176 1.56019 12.4393 1.04181 12.6375 0.417C12.1224 0.724125 11.5537 0.941063 10.9475 1.06213C10.4584 0.541313 9.76129 0.21875 9.00079 0.21875C7.52529 0.21875 6.33742 1.41638 6.33742 2.88456C6.33742 3.09581 6.35529 3.29894 6.39917 3.49231C4.18348 3.38425 2.22292 2.32231 0.905857 0.704625C0.67592 1.10356 0.541045 1.56019 0.541045 2.05175C0.541045 2.97475 1.01636 3.79294 1.72486 4.26662C1.29667 4.2585 0.876607 4.13419 0.520732 3.93837C0.520732 3.9465 0.520732 3.95706 0.520732 3.96762C0.520732 5.26275 1.44454 6.3385 2.65598 6.58631C2.43904 6.64563 2.20261 6.67406 1.95723 6.67406C1.78661 6.67406 1.61436 6.66431 1.45267 6.62856C1.79798 7.684 2.77786 8.45994 3.94298 8.48512C3.03623 9.19444 1.88492 9.62181 0.638545 9.62181C0.419982 9.62181 0.210357 9.61206 0.000732422 9.58525C1.18129 10.3466 2.58042 10.7812 4.08923 10.7812C8.99348 10.7812 11.6747 6.71875 11.6747 3.19737C11.6747 3.07956 11.6707 2.96581 11.665 2.85287C12.1939 2.4775 12.6384 2.00869 13.0007 1.46919Z"
+                          d="M7.99924 1.9925H9.09474V0.0845C8.90574 0.0585 8.25574 0 7.49874 0C5.91924 0 4.83724 0.9935 4.83724 2.8195V4.5H3.09424V6.633H4.83724V12H6.97424V6.6335H8.64674L8.91224 4.5005H6.97374V3.031C6.97424 2.4145 7.14024 1.9925 7.99924 1.9925Z"
                           fill="currentColor"
                         />
-                      </svg>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#"
-                      class="social-networks__icon"
-                      target="_blank"
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_1279">
+                          <rect
+                            width="12"
+                            height="12"
+                            fill="currentColor"
+                            transform="translate(0.000732422)"
+                          />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="social-networks__icon"
+                    target="_blank"
+                  >
+                    <svg
+                      width="13"
+                      height="13"
+                      viewBox="0 0 13 13"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
                     >
-                      <svg
-                        width="11"
-                        height="11"
-                        viewBox="0 0 11 11"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <g clip-path="url(#clip0_1_1298)">
-                          <path
-                            d="M10.9979 10.9998V10.9993H11.0007V6.96507C11.0007 4.99148 10.5758 3.47119 8.26856 3.47119C7.1594 3.47119 6.41506 4.07986 6.11119 4.6569H6.07911V3.65544H3.89148V10.9993H6.1694V7.3629C6.1694 6.40544 6.3509 5.47961 7.53661 5.47961C8.7049 5.47961 8.72231 6.57228 8.72231 7.42432V10.9998H10.9979Z"
+                      <g clip-path="url(#clip0_1_1284)">
+                        <path
+                          d="M9.48173 0H3.51971C1.57931 0 0.000732422 1.57858 0.000732422 3.51898V9.4811C0.000732422 11.4214 1.57931 13 3.51971 13H9.48183C11.4221 13 13.0007 11.4214 13.0007 9.4811V3.51898C13.0007 1.57858 11.4221 0 9.48173 0V0ZM12.2386 9.4811C12.2386 11.0012 11.0019 12.2379 9.48173 12.2379H3.51971C1.99955 12.2379 0.762847 11.0012 0.762847 9.4811V3.51898C0.762847 1.99881 1.99955 0.762114 3.51971 0.762114H9.48183C11.0019 0.762114 12.2386 1.99881 12.2386 3.51898V9.4811Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M6.50075 2.94531C4.54071 2.94531 2.94617 4.53986 2.94617 6.49989C2.94617 8.45993 4.54071 10.0545 6.50075 10.0545C8.46078 10.0545 10.0553 8.45993 10.0553 6.49989C10.0553 4.53986 8.46078 2.94531 6.50075 2.94531ZM6.50075 9.29236C4.96105 9.29236 3.70828 8.03969 3.70828 6.49989C3.70828 4.96019 4.96105 3.70743 6.50075 3.70743C8.04055 3.70743 9.29322 4.96019 9.29322 6.49989C9.29322 8.03969 8.04055 9.29236 6.50075 9.29236Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M10.1403 1.68311C9.56108 1.68311 9.08997 2.15432 9.08997 2.73344C9.08997 3.31266 9.56108 3.78388 10.1403 3.78388C10.7195 3.78388 11.1907 3.31266 11.1907 2.73344C11.1907 2.15422 10.7195 1.68311 10.1403 1.68311ZM10.1403 3.02166C9.98141 3.02166 9.85208 2.89233 9.85208 2.73344C9.85208 2.57445 9.98141 2.44522 10.1403 2.44522C10.2993 2.44522 10.4286 2.57445 10.4286 2.73344C10.4286 2.89233 10.2993 3.02166 10.1403 3.02166Z"
+                          fill="currentColor"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_1284">
+                          <rect
+                            width="13"
+                            height="13"
                             fill="currentColor"
+                            transform="translate(0.000732422)"
                           />
-                          <path
-                            d="M0.182251 3.65625H2.46292V11.0001H0.182251V3.65625Z"
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="social-networks__icon"
+                    target="_blank"
+                  >
+                    <svg
+                      width="13"
+                      height="11"
+                      viewBox="0 0 13 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M13.0007 1.46919C12.5173 1.68125 12.0022 1.82181 11.4651 1.89006C12.0176 1.56019 12.4393 1.04181 12.6375 0.417C12.1224 0.724125 11.5537 0.941063 10.9475 1.06213C10.4584 0.541313 9.76129 0.21875 9.00079 0.21875C7.52529 0.21875 6.33742 1.41638 6.33742 2.88456C6.33742 3.09581 6.35529 3.29894 6.39917 3.49231C4.18348 3.38425 2.22292 2.32231 0.905857 0.704625C0.67592 1.10356 0.541045 1.56019 0.541045 2.05175C0.541045 2.97475 1.01636 3.79294 1.72486 4.26662C1.29667 4.2585 0.876607 4.13419 0.520732 3.93837C0.520732 3.9465 0.520732 3.95706 0.520732 3.96762C0.520732 5.26275 1.44454 6.3385 2.65598 6.58631C2.43904 6.64563 2.20261 6.67406 1.95723 6.67406C1.78661 6.67406 1.61436 6.66431 1.45267 6.62856C1.79798 7.684 2.77786 8.45994 3.94298 8.48512C3.03623 9.19444 1.88492 9.62181 0.638545 9.62181C0.419982 9.62181 0.210357 9.61206 0.000732422 9.58525C1.18129 10.3466 2.58042 10.7812 4.08923 10.7812C8.99348 10.7812 11.6747 6.71875 11.6747 3.19737C11.6747 3.07956 11.6707 2.96581 11.665 2.85287C12.1939 2.4775 12.6384 2.00869 13.0007 1.46919Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="social-networks__icon"
+                    target="_blank"
+                  >
+                    <svg
+                      width="11"
+                      height="11"
+                      viewBox="0 0 11 11"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g clip-path="url(#clip0_1_1298)">
+                        <path
+                          d="M10.9979 10.9998V10.9993H11.0007V6.96507C11.0007 4.99148 10.5758 3.47119 8.26856 3.47119C7.1594 3.47119 6.41506 4.07986 6.11119 4.6569H6.07911V3.65544H3.89148V10.9993H6.1694V7.3629C6.1694 6.40544 6.3509 5.47961 7.53661 5.47961C8.7049 5.47961 8.72231 6.57228 8.72231 7.42432V10.9998H10.9979Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M0.182251 3.65625H2.46292V11.0001H0.182251V3.65625Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M1.32165 0C0.592441 0 0.000732422 0.591708 0.000732422 1.32092C0.000732422 2.05013 0.592441 2.65421 1.32165 2.65421C2.05086 2.65421 2.64257 2.05013 2.64257 1.32092C2.64211 0.591708 2.0504 0 1.32165 0V0Z"
+                          fill="currentColor"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_1_1298">
+                          <rect
+                            width="11"
+                            height="11"
                             fill="currentColor"
+                            transform="translate(0.000732422)"
                           />
-                          <path
-                            d="M1.32165 0C0.592441 0 0.000732422 0.591708 0.000732422 1.32092C0.000732422 2.05013 0.592441 2.65421 1.32165 2.65421C2.05086 2.65421 2.64257 2.05013 2.64257 1.32092C2.64211 0.591708 2.0504 0 1.32165 0V0Z"
-                            fill="currentColor"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_1_1298">
-                            <rect
-                              width="11"
-                              height="11"
-                              fill="currentColor"
-                              transform="translate(0.000732422)"
-                            />
-                          </clipPath>
-                        </defs>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="footer__panel">
-          <div class="container">
-            <div class="footer__copy">
-              <p>
-                Copyright ® 2022
-                <a href="#">prodesigner</a>
-                All rights Rcerved
-              </p>
-              <div></div>
-            </div>
+      </div>
+      <div class="footer__panel">
+        <div class="container">
+          <div class="footer__copy">
+            <p>
+              Copyright ® 2022
+              <a href="#">prodesigner</a>
+              All rights Rcerved
+            </p>
+            <div></div>
           </div>
         </div>
-      </footer>
-    </div>
-    <script
-      type="module"
-      src="/src/js/main.js"
-    ></script>
-  </body>
+      </div>
+    </footer>
+  </div>
+  <script
+    type="module"
+    src="/src/js/main.js"
+  ></script>
+</body>
 </html>
+
+

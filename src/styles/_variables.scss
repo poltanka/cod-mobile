@@ -1,17 +1,22 @@
+@use "helpers" as *;
+
 :root {
-  --font-family: 'Poppins', 'Open Sans', 'Helvetica Neue', sans-serif;
+  --font-family: "Poppins", "Open Sans", "Helvetica Neue", sans-serif;
   --base-font-size: 16px;
-  --heading-font-size: 36px;
 
-  --grid-gutter-width: 20px;
-
-  --section-padding: 40px;
+  --container-width: #{rem(1400)};
+  --container-padding-x: #{rem(20)};
+  --section-padding: #{rem(40)};
 
   --color-light: #fdfaed;
   --color-dark: #070320;
   --color-white: #fff;
-  --color-black: #000;
-  --color-red: #d80027;
+  --color-white-rgb: 255, 255, 255;
+  --color-black: #1c140f;
+  --color-accent: #d80027;
+  --color-pink: #f6e3fb;
+  --color-light-brown: #fbeae3;
+  --color-mint: #e3fbf2;
   --color-gray: #898989;
   --color-primary: #dc7000;
   --color-primary-hover: #fb9e3c;

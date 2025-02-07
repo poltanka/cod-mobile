@@ -1,0 +1,34 @@
+@use "../helpers" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(14) rem(30);
+  font-weight: 400;
+  background: var(--color-accent);
+  border-radius: rem(8);
+  transition: all 0.3s ease-in-out;
+  &.button--small {
+    padding: rem(10) rem(20);
+    font-size: rem(13);
+  }
+  &:hover {
+    background: var(--color-primary);
+  }
+
+  &.button--primary {
+    background: linear-gradient(
+      90deg,
+      var(--color-accent) 0%,
+      var(--color-primary-hover) 100%
+    );
+    border-radius: rem(50);
+  }
+  &.button--secondary {
+    background: rgba(var(--color-white-rgb), 0.11);
+    &:hover {
+      background: var(--color-accent);
+    }
+  }
+}
