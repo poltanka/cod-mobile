@@ -77,6 +77,18 @@ a {
   }
 }
 
+// animations for buttons and links elements
+button,
+a,
+input[type="submit"],
+input[type="reset"],
+summary {
+  @include animates;
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
 #wrapper {
   position: relative;
   display: grid;
