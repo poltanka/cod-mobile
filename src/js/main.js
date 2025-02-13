@@ -1,9 +1,29 @@
 import 'the-new-css-reset/css/reset.css';
-import '../styles/style.scss';
+import '../styles/main.scss';
 
-const hello = () => {
-  // eslint-disable-next-line no-console
-  console.log('Hello World');
-};
+class MobileNav {
+  constructor() {
+    this.burgerButton = document.querySelector('.header__burger-button');
+    this.menu = document.querySelector('.header__frame');
+    this.body = document.body;
+  }
 
-hello();
+  init() {
+    this.initMobileNav();
+  }
+
+  initMobileNav() {
+    if (this.burgerButton && this.menu) {
+      this.burgerButton.addEventListener('click', () => {
+        this.menu.classList.toggle('active');
+        this.burgerButton.classList.toggle('active');
+        this.body.classList.toggle('scroll-lock');
+      });
+    }
+  }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileNav = new MobileNav();
+  mobileNav.init();
+});

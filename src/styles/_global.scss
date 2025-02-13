@@ -1,0 +1,258 @@
+@use "helpers" as *;
+
+body {
+  font-family: var(--font-family);
+  font-size: rem(16);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--color-white);
+  background: var(--color-dark);
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  line-height: 1.1;
+  font-weight: 600;
+  text-wrap: balance;
+  .rte & {
+    margin-bottom: rem(24);
+    @include desktop {
+      margin-bottom: rem(32);
+    }
+  }
+}
+
+h1,
+.h1 {
+  @include fluid-text(50, 28);
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  @include fluid-text(33, 24);
+}
+
+h3,
+.h3 {
+  @include fluid-text(30, 20);
+}
+
+h4,
+.h4 {
+  @include fluid-text(23, 21);
+}
+
+h5,
+.h5 {
+  @include fluid-text(20, 18);
+}
+
+h6,
+.h6 {
+  @include fluid-text(18, 16);
+}
+
+a {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+// animations for buttons and links elements
+button,
+a,
+input[type="submit"],
+input[type="reset"],
+summary {
+  @include animates;
+  @media screen and (prefers-reduced-motion: reduce) {
+    transition: none;
+  }
+}
+
+#wrapper {
+  position: relative;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+.section-padding {
+  padding: var(--section-padding) 0;
+  @include desktop {
+    padding: calc(var(--section-padding) + rem(14)) 0;
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+  @include desktop {
+    padding-inline: calc(var(--container-padding-x) * 3);
+  }
+  @include widescreen {
+    padding-inline: calc(var(--container-padding-x) * 6);
+  }
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  font-size: rem(24);
+  font-weight: 800;
+  text-transform: uppercase;
+  &.header__logo {
+    font-size: rem(29);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 32px;
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 32px;
+  @include tablet {
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  &.grid-container--dark {
+    .grid-content {
+      color: var(--color-white);
+      background: var(--color-black);
+    }
+  }
+
+  .grid-item {
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: auto;
+      border-radius: 30px;
+    }
+  }
+
+  .grid-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+    font-size: calc(var(--base-font-size) - 2px);
+    color: var(--color-dark);
+    background: var(--color-white);
+    border-radius: 20px;
+    &:last-child:nth-child(odd) {
+      @media screen and (max-width: 1023px) {
+        grid-column: span 2;
+        width: 100%;
+      }
+    }
+    @include desktop {
+      padding: 64px 36px;
+    }
+
+    .grid-item__content-title {
+      margin: 0;
+    }
+  }
+
+  .tag {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+
+    .tag__label {
+      padding: 4px 8px;
+      border-radius: 10px;
+
+      &.tag__label--pink {
+        background: var(--color-pink);
+      }
+      &.tag__label--light-brown {
+        background: var(--color-light-brown);
+      }
+      &.tag__label--mint {
+        background: var(--color-mint);
+      }
+    }
+  }
+
+  .grid-item__media {
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      display: inline-block;
+      vertical-align: top;
+      border-radius: 30px;
+      overflow: hidden;
+    }
+  }
+}
+
+.team__avatar {
+  width: 123px;
+  height: 123px;
+  margin: 0 auto;
+  overflow: hidden;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

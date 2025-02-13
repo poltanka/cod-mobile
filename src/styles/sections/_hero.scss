@@ -1,0 +1,37 @@
+@use "../helpers" as *;
+
+.hero__holder {
+  @include tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(32);
+    align-items: center;
+  }
+}
+
+.hero__title {
+  margin-bottom: rem(30);
+}
+
+.subtitle {
+  margin-bottom: rem(20);
+  font-weight: bold;
+  color: var(--color-primary);
+}
+
+.hero__text,
+.hero__description {
+  margin-bottom: rem(32);
+  @include tablet {
+    margin-bottom: rem(50);
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.hero__image {
+  @include tablet {
+    order: 1;
+  }
+}
